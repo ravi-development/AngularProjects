@@ -1,0 +1,36 @@
+<DIV class="ekart--product--container">
+<!-- <img [src]="product.pImage">
+<p>Name : {{product.name}}</p>
+<p>Price : $ {{product.price}}</p>
+<p>Color : {{product.color}}</p>
+<p>Discount : {{getDiscount()}}</p>
+<p>{{product.instock > 0 ? 'only '+ product.instock + ' item left' : 'Not in stock'}}</p> -->
+<!-- <button [disabled]="!(product.instock > 0)">Buy Now</button> -->
+<!-- <button [disabled]="!(addToCart > 0)" (click)="DecrementCard()">-</button>
+<span>{{addToCart}}</span>
+<button [disabled]="!(addToCart < 10)" (click)="IncrementCard()">+</button> -->
+<!-- <input (input)="onInputChange($event)">
+<p>Input Value: {{name}}</p> -->
+<app-search (OnSearchEvent)="setSearchText($event)"></app-search>
+
+<product-list [SearchText]="searchText" #productListComponent></product-list>
+<product-details *ngIf="productListComponent.selecttedProduct" [productDetail]="prodListcomp"></product-details>
+
+<div class="ekar-featured-products">
+  <div class="ekar-featured-product-heading">
+<h1>Latest Arrival in Popular Brands</h1>
+  </div>
+<featured-brand>
+  <h3 class="title">New Arrival in Nike</h3>
+  <button class="call-to-action">Learn More</button>
+</featured-brand>
+<featured-brand>
+  <h3 class="title">New Arrival in Adidas</h3>
+  <button class="call-to-action">Learn More</button>
+</featured-brand>
+<featured-brand>
+  <h3 class="title">New Arrival in Reebok</h3>
+  <button class="call-to-action">Learn More</button>
+</featured-brand>
+</div>
+</DIV>
